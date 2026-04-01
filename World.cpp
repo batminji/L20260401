@@ -18,14 +18,6 @@ UWorld::~UWorld()
 	Actors.clear();
 }
 
-void UWorld::Input()
-{
-	for (auto Actor : Actors)
-	{
-		Actor->Input();
-	}
-}
-
 void UWorld::Tick()
 {
 	for (auto Actor : Actors)

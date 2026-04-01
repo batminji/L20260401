@@ -7,7 +7,6 @@ public:
 	UWorld();
 	virtual ~UWorld();
 
-	void Input();
 	void Tick();
 	void Render();
 

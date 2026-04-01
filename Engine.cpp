@@ -50,13 +50,14 @@ void UEngine::Run()
 void UEngine::Render(int InX, int InY, int InColorR, int InColorG, int InColorB, int Size)
 {
 	SDL_SetRenderDrawColor(Renderer, InColorR, InColorG, InColorB, 255);
-	SDL_Rect Rect = { InX * Size, InY * Size, Size, Size };
+	SDL_Rect Rect = { InX, InY, Size, Size };
 	SDL_RenderFillRect(Renderer, &Rect);
 }
 
 void UEngine::Input()
 {
-	World->Input();
+	
+	//World->Input();
 }
 
 void UEngine::Tick()
