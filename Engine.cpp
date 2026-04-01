@@ -17,6 +17,7 @@ void UEngine::Init()
 	SDL_Init(SDL_INIT_EVERYTHING);
 	Window = SDL_CreateWindow("L20260401", WINDOWX, WINDOWY, WINDOWW, WINDOWH, SDL_WINDOW_SHOWN);
 	Renderer = SDL_CreateRenderer(Window, -1, 0);
+	State = SDL_GetKeyboardState(NULL);
 
 	bIsRunning = true;
 	World = new UWorld();
@@ -50,7 +51,7 @@ void UEngine::Run()
 void UEngine::Render(int InX, int InY, int InColorR, int InColorG, int InColorB, int Size)
 {
 	SDL_SetRenderDrawColor(Renderer, InColorR, InColorG, InColorB, 255);
-	SDL_Rect Rect = { InX, InY, Size, Size };
+	SDL_Rect Rect = { InX * Size, InY * Size, Size, Size };
 	SDL_RenderFillRect(Renderer, &Rect);
 }
 

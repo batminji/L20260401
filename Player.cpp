@@ -20,23 +20,23 @@ void APlayer::Tick()
 	__super::Tick();
 
 	SDL_Event Event = GEngine->GetEvent();
-
 	if (Event.type == SDL_KEYDOWN)
 	{
-		SDL_Keycode KeyCode = Event.key.keysym.sym;
-		if (KeyCode == SDLK_w)
+		const Uint8* State = GEngine->GetState();
+
+		if (State[SDL_SCANCODE_UP])
 		{
 			Y--;
 		}
-		if (KeyCode == SDLK_s)
+		if (State[SDL_SCANCODE_DOWN])
 		{
 			Y++;
 		}
-		if (KeyCode == SDLK_a)
+		if (State[SDL_SCANCODE_LEFT])
 		{
 			X--;
 		}
-		if (KeyCode == SDLK_d)
+		if (State[SDL_SCANCODE_RIGHT])
 		{
 			X++;
 		}
