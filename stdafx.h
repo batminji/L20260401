@@ -5,6 +5,7 @@
 #pragma comment(lib, "SDL2main")
 
 #include <iostream>
+#include <vector>
 
 #define WINDOWX 50
 #define WINDOWY 50
