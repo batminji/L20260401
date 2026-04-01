@@ -24,19 +24,19 @@ void APlayer::Tick()
 	{
 		const Uint8* State = GEngine->GetState();
 
-		if (State[SDL_SCANCODE_UP])
+		if (State[SDL_SCANCODE_UP] || State[SDL_SCANCODE_W])
 		{
 			Y--;
 		}
-		if (State[SDL_SCANCODE_DOWN])
+		if (State[SDL_SCANCODE_DOWN] || State[SDL_SCANCODE_S])
 		{
 			Y++;
 		}
-		if (State[SDL_SCANCODE_LEFT])
+		if (State[SDL_SCANCODE_LEFT] || State[SDL_SCANCODE_A])
 		{
 			X--;
 		}
-		if (State[SDL_SCANCODE_RIGHT])
+		if (State[SDL_SCANCODE_RIGHT] || State[SDL_SCANCODE_D])
 		{
 			X++;
 		}

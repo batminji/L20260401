@@ -41,6 +41,11 @@ protected:
 	SDL_Renderer* Renderer;
 	SDL_Event Event;
 	const Uint8* State;
+
+	const int FPS = 60;
+	const int FrameDelay = 1000 / FPS;
+	Uint32 FrameStart;
+	int FrameTime;
 };
 
 #define GEngine		UEngine::GetInstance()
